@@ -1,0 +1,81 @@
+<h1 id="aion-uoft-hackathon-cheatsheet">Aion UofT Hackathon Cheatsheet</h1>
+<p>Here’s a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.</p>
+<ol class="incremental" type="1">
+<li><a href="#hello-world-example">Hello World Example</a></li>
+<li><a href="#aion-overview">Aion Overview</a></li>
+<li><a href="#useful-links">Useful Links</a></li>
+<li><a href="#contact-info">Contact Info</a></li>
+</ol>
+<h2 id="hello-world-example">Hello World Example</h2>
+<p>Follow these steps to spin up a local Aion Blockchain and deploy a simple <em>Hello World</em> contract.</p>
+<ol class="incremental" type="1">
+<li><a href="https://docs.aion.network/docs/maven-and-aion4j-installation">Install Maven</a>.</li>
+<li><p>Create an Aion project:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">mvn</span> archetype:generate -DarchetypeGroupId=org.aion4j -DarchetypeArtifactId=avm-archetype -DarchetypeVersion=0.6</a></code></pre></div>
+<p>This command creates a sample <em>Hello World</em> project. You can find the contract at <code>src/main/java/foobar/HelloAvm.java</code>.</p></li>
+<li><p>Edit the <code>pom.xml</code> file to use version the latest version <code>0.4.8</code> of the Aion4j plugin:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;properties&gt;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">    ...</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">&lt;aion4j.plugin.version&gt;</span>0.4.8<span class="kw">&lt;/aion4j.plugin.version&gt;</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    ...</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">&lt;/properties&gt;</span></a></code></pre></div></li>
+<li><p>Initialize the project:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">mvn</span> initialize</a></code></pre></div></li>
+<li><p>Compile the contract:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="ex">mvn</span> clean install</a></code></pre></div></li>
+<li><p>Deploy your contract:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ex">mvn</span> aion4j:deploy</a></code></pre></div></li>
+</ol>
+<p>This <em>deploys</em> the contract to a local AVM, also called the <a href="https://docs.aion.network/docs/maven-and-aion4j-embedded-avm">Embedded AVM</a>.</p>
+<ol class="incremental" start="5" type="1">
+<li><p>Call the <code>greet</code> class within the <code>HelloWorld.java</code> contract:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="ex">mvn</span> aion4j:call -Dmethod=greet -Dargs=<span class="st">&quot;-T Bob&quot;</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="op">&gt;</span> <span class="ex">...</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="op">&gt;</span> [<span class="ex">INFO</span>] ****************  Method call result  ****************</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="op">&gt;</span> [<span class="ex">INFO</span>] Data       : Hello Bob</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="op">&gt;</span> [<span class="ex">INFO</span>] Energy used: 68514</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="op">&gt;</span> [<span class="ex">INFO</span>] *********************************************************</a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="op">&gt;</span> <span class="ex">...</span></a></code></pre></div></li>
+<li><p>Edit the contract and change the <code>greet</code> function so that the contract returns “Good Morning”:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">public</span> <span class="dt">static</span> <span class="bu">String</span> <span class="fu">greet</span>(<span class="bu">String</span> name) {</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">    <span class="kw">return</span> <span class="st">&quot;Good morning &quot;</span> + name;</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">}</a></code></pre></div></li>
+<li><p>Recompile the contract:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="ex">mvn</span> clean install</a></code></pre></div></li>
+<li><p>Redeploy the contract:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="ex">mvn</span> aion4j:deploy</a></code></pre></div></li>
+<li><p>Call the <code>greet</code> method again:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="ex">mvn</span> aion4j:call -Dmethod=greet -Dargs=<span class="st">&quot;-T Alice&quot;</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="op">&gt;</span> <span class="ex">...</span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="op">&gt;</span> [<span class="ex">INFO</span>] ****************  Method call result  ****************</a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="op">&gt;</span> [<span class="ex">INFO</span>] Data       : Good morning Alice</a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="op">&gt;</span> [<span class="ex">INFO</span>] Energy used: 68514</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="op">&gt;</span> [<span class="ex">INFO</span>] *********************************************************</a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="op">&gt;</span> <span class="ex">...</span></a></code></pre></div></li>
+<li><p>And you’re done! When you’re ready to deploy to the testnet, check out the <a href="https://docs.aion.network/docs/maven-and-aion4j-remote-avm">Remote AVM documentation</a>.</p></li>
+</ol>
+<h2 id="aion-overview">Aion Overview</h2>
+<ul class="incremental">
+<li>Who / what Aion is.</li>
+<li>Why we chose Java.</li>
+<li>Open grants available.</li>
+</ul>
+<h2 id="useful-links">Useful Links</h2>
+<ol class="incremental" type="1">
+<li><a href="https://docs.aion.network">Aion Documentation</a></li>
+<li><a href="https://learn.aion.network">Aion University</a></li>
+<li><a href="https://nodesmith.io/">Free Node Hosting</a></li>
+<li><a href="https://blog.aion.network/debugging-avm-contracts-4a3256e86221">Testing and Debugging with Java Smart Contracts</a></li>
+<li><a href="https://github.com/aion-jiaying/HelloAVM">Example Application using React</a></li>
+<li><a href="https://learn.aion.network/docs/aiwa">Using the AIWA Browser Wallet (Metamask)</a></li>
+</ol>
+<h2 id="contact-info">Contact Info</h2>
+<p>If you’ve got any questions just find one of the nerds in an Aion shirt, or message us on the <code>#aion-challenge</code> Slack channel.</p>
+<h3 id="footer">Footer</h3>
+<p>This page is available in <a href="https://aionuoft.ca/index.html">fancy HTML</a>, <a href="https://aionuoft.ca/cheatsheet.md">markdown</a> or a <a href="https://aionuoft.ca/cheatsheet.html">basic af html</a>. We’re using <a href="https://github.com/mblode/marx">Mblode’s Marx Classless CSS</a>.</p>
