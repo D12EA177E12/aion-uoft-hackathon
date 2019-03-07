@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Converting markdown to html..."
-pandoc -i cheatsheet.md -o cheatsheet.html
-echo "Conversion complete."
-
 echo "Writing bolierplate into HTML..."
 echo "<!DOCTYPE html>
 <html>
@@ -25,8 +21,7 @@ echo "<!DOCTYPE html>
 echo "Finished writing boilerplate."
 
 echo "Writing Markdown into index.html..."
-markdown=$(<cheatsheet.html)
-echo "$markdown" >> index.html
+pandoc -i cheatsheet.md -t html >> index.html
 echo "Writing finished."
 
 echo "Closing of HTML file."
