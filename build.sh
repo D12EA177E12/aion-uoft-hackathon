@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Writing bolierplate into HTML..."
 echo "<!DOCTYPE html>
 <html>
@@ -20,13 +19,12 @@ echo "<!DOCTYPE html>
         </style>
     </head>
     <body>" > index.html
-echo "Finished writing boilerplate."
 
 echo "Writing Markdown into index.html..."
 pandoc -i cheatsheet.md -t html >> index.html
-echo "Writing finished."
 
 echo "Closing of HTML file."
 echo "</body>
 </html>" >> index.html
-echo "File closed."
+
+echo "Build complete."
