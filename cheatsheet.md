@@ -1,4 +1,6 @@
-# Aion UofT Hackathon Cheatsheet
+# Aion UofT Hackathon
+
+![Aion and UofT Logos](aion-uoft.png)
 
 Here's a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.
 
@@ -42,7 +44,7 @@ Follow these steps to spin up a local Aion Blockchain and deploy a simple _Hello
     mvn clean install
     ```
 
-4. Deploy your contract:
+6. Deploy your contract:
 
     ```bash
     mvn aion4j:deploy
@@ -126,3 +128,5 @@ If you've got any questions just find one of the nerds in an Aion shirt, or mess
 ### Footer
 
 This page is available in [fancy HTML](https://aionuoft.ca/index.html), [markdown](https://aionuoft.ca/cheatsheet.md) or a [basic af html](https://aionuoft.ca/cheatsheet.html). We're using [Mblode's Marx Classless CSS](https://github.com/mblode/marx).
+
+![Aion and UofT Logos](aion-uoft.png)

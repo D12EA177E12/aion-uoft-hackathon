@@ -12,9 +12,20 @@ echo "<!DOCTYPE html>
             body {
                 max-width: 900px;
                 margin: 0 auto;
+                padding: 10px 10px 10px 10px;
             }
             code a {
                 text-decoration: none !important;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            figcaption {
+                text-align: center;
+                font-style: italic;
             }
         </style>
     </head>
