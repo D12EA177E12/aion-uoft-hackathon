@@ -5,9 +5,10 @@
 Here's a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.
 
 1. [Hello World Example](#hello-world-example)
-2. [Aion Overview](#aion-overview)
-3. [Useful Links](#useful-links)
-4. [Contact Info](#contact-info)
+2. [About Overview](#about-overview)
+3. [Our Core Strategy](#our-core-strategy)
+4. [Useful Links](#useful-links)
+5. [Contact Info](#contact-info)
 
 ## Hello World Example
 
@@ -106,11 +107,56 @@ This _deploys_ the contract to a local AVM, also called the [Embedded AVM](https
 
 10. And you're done! When you're ready to deploy to the testnet, check out the [Remote AVM documentation](https://docs.aion.network/docs/maven-and-aion4j-remote-avm).
 
-## Aion Overview
+### Next Steps
 
-- Who / what Aion is.
-- Why we chose Java.
-- Open grants available.
+Checkout these tutorials if you want to delve in a bit deeper.
+
+- [AVM Hackathon Web3 Guide](https://learn.aion.network/docs/avm-hackathon-web3-guide)
+- [Deploy your first Java Smart Contract!](https://learn.aion.network/docs/aion-deploy-java-smart-contract-maven)
+- [Debug your Java Smart Contract](https://learn.aion.network/docs/debug-your-java-smart-contract)
+- [Migrate to Java Smart Contracts from Solidity](https://learn.aion.network/docs/migrate-solidity-to-java-smart-contract)
+- [Java vs Solidity Function Comparisons](https://learn.aion.network/docs/java-vs-solidity-function-comparisons)
+
+## About Overview
+
+### What we Are
+
+Aion is a scalable, approachable, and reliable smart contract platform for decentralized applications. That's a lot of waffle, so here's our definitions of those points:
+
+- Scalable: Solving blockchain scalability
+- Approachable: The most developer-friendly platform
+- Reliable: Providing confidence in a new world
+
+## Our Core Strategy
+
+One of the first things we found useful once we started building test dApps for AVM was how easy it is to write correct code in Java. This is mainly due to the ability to use complex, user-defined, types native to Java. It also helps that we didn't have to change our IDEs or workflow. Java just works.
+
+This doesn’t even begin to tap into the treasure trove of open source tools which have grown around the Java ecosystem, many of which can be applied to this environment to improve quality and velocity.
+
+### Features
+
+Here's a few features of the JVM (and consequentially the AVM) that are beneficial to the Aion ecosystem. 
+
+#### Performance
+
+The AVM uses the JIT compiler which optimizes the blockchain application code. It also features multi-threading, allowing increased throughput via concurrent transaction execution as opposed to most blockchain VMs.
+
+#### Reliability & Maturity
+
+The core of the JVM is a very mature piece of software, changing little between releases and being used for a myriad of purposes, across countless environments, for over 2 decades. Anything we can do to leverage that history avoids potential pit-falls.
+
+#### Developer-friendly
+
+The Java-based AVM leverages the entire Java tooling ecosystem, making developer onboarding and experience extremely streamlined. You get the full developer package including the compiler and IDE straight out of the box! That said, the AVM taps into a well-established community that has claimed the top spot for the #1 language (Java) in the past few years.
+
+### How you can get involved
+
+There's a bunch of ways you can get involved with the project, even after this hackathon is over:
+
+- [Contribute to the codebase (we're open-source, obviously)](https://github.com/aionnetwork)
+- [Claim bounties and grants](https://aion.network/bounty)
+- [Improve the network by proposing an AIP](https://github.com/aionnetwork/AIP)
+- [Join our team! We are hiring!](https://aion.network/careers/)
 
 ## Useful Links
 
