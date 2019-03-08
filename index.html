@@ -9,16 +9,38 @@
     </head>
     <body>
 <h1 id="aion-uoft-hackathon">Aion UofT Hackathon</h1>
+<p>This is the cheatsheet for the Aion / Eth UofT Hackathon! The grand prize for the Aion category is $2500 for the winning team! We’ll also be giving out some tickets to the <a href="https://rebuildconference.org/">Rebuild Conference</a> happening in April!</p>
 <figure>
 <img src="aion-uoft.png" alt="Aion and UofT Logos" /><figcaption>Aion and UofT Logos</figcaption>
 </figure>
 <p>Here’s a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.</p>
 <ol class="incremental" type="1">
+<li><a href="#about-aion">About Aion</a></li>
 <li><a href="#hello-world-example">Hello World Example</a></li>
-<li><a href="#aion-overview">Aion Overview</a></li>
+<li><a href="#get-involved">Get Involved</a></li>
 <li><a href="#useful-links">Useful Links</a></li>
 <li><a href="#contact-info">Contact Info</a></li>
 </ol>
+<hr />
+<h2 id="about-aion">About Aion</h2>
+<p>Aion is a scalable, approachable, and reliable smart contract platform for decentralized applications. That’s a lot of waffle, so here’s our definitions of those points:</p>
+<ul class="incremental">
+<li>Scalable: Solving blockchain scalability</li>
+<li>Approachable: The most developer-friendly platform</li>
+<li>Reliable: Providing confidence in a new world</li>
+</ul>
+<h3 id="our-core-strategy">Our Core Strategy</h3>
+<p>One of the first things we found useful once we started building test dApps for AVM was how easy it is to write correct code in Java. This is mainly due to the ability to use complex, user-defined, types native to Java. It also helps that we didn’t have to change our IDEs or workflow. Java just works.</p>
+<p>This doesn’t even begin to tap into the treasure trove of open source tools which have grown around the Java ecosystem, many of which can be applied to this environment to improve quality and velocity.</p>
+<h4 id="features">Features</h4>
+<p>Here’s a few features of the JVM (and consequentially the AVM) that are beneficial to the Aion ecosystem.</p>
+<h5 id="performance">Performance</h5>
+<p>The AVM uses the JIT compiler which optimizes the blockchain application code. It also features multi-threading, allowing increased throughput via concurrent transaction execution as opposed to most blockchain VMs.</p>
+<h5 id="reliability-maturity">Reliability &amp; Maturity</h5>
+<p>The core of the JVM is a very mature piece of software, changing little between releases and being used for a myriad of purposes, across countless environments, for over 2 decades. Anything we can do to leverage that history avoids potential pit-falls.</p>
+<h5 id="developer-friendly">Developer-friendly</h5>
+<p>The Java-based AVM leverages the entire Java tooling ecosystem, making developer onboarding and experience extremely streamlined. You get the full developer package including the compiler and IDE straight out of the box! That said, the AVM taps into a well-established community that has claimed the top spot for the #1 language (Java) in the past few years.</p>
+<hr />
 <h2 id="hello-world-example">Hello World Example</h2>
 <p>Follow these steps to spin up a local Aion Blockchain and deploy a simple <em>Hello World</em> contract.</p>
 <ol class="incremental" type="1">
@@ -26,10 +48,10 @@
 <li><p>Create an Aion project:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">mvn</span> archetype:generate -DarchetypeGroupId=org.aion4j -DarchetypeArtifactId=avm-archetype -DarchetypeVersion=0.6</a></code></pre></div>
 <p>This command creates a sample <em>Hello World</em> project. You can find the contract at <code>src/main/java/foobar/HelloAvm.java</code>.</p></li>
-<li><p>Edit the <code>pom.xml</code> file to use version the latest version <code>0.4.8</code> of the Aion4j plugin:</p>
+<li><p>Edit the <code>pom.xml</code> file to use version the latest version <code>0.4.9</code> of the Aion4j plugin:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">&lt;properties&gt;</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">    ...</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">&lt;aion4j.plugin.version&gt;</span>0.4.8<span class="kw">&lt;/aion4j.plugin.version&gt;</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="kw">&lt;aion4j.plugin.version&gt;</span>0.4.9<span class="kw">&lt;/aion4j.plugin.version&gt;</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">    ...</a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">&lt;/properties&gt;</span></a></code></pre></div></li>
 <li><p>Initialize the project:</p>
@@ -73,11 +95,23 @@
 <a class="sourceLine" id="cb10-10" data-line-number="10"><span class="op">&gt;</span> <span class="ex">...</span></a></code></pre></div></li>
 <li><p>And you’re done! When you’re ready to deploy to the testnet, check out the <a href="https://docs.aion.network/docs/maven-and-aion4j-remote-avm">Remote AVM documentation</a>.</p></li>
 </ol>
-<h2 id="aion-overview">Aion Overview</h2>
+<h3 id="next-steps">Next Steps</h3>
+<p>Checkout these tutorials if you want to delve in a bit deeper.</p>
 <ul class="incremental">
-<li>Who / what Aion is.</li>
-<li>Why we chose Java.</li>
-<li>Open grants available.</li>
+<li><a href="https://learn.aion.network/docs/avm-hackathon-web3-guide">AVM Hackathon Web3 Guide</a></li>
+<li><a href="https://learn.aion.network/docs/aion-deploy-java-smart-contract-maven">Deploy your first Java Smart Contract!</a></li>
+<li><a href="https://learn.aion.network/docs/debug-your-java-smart-contract">Debug your Java Smart Contract</a></li>
+<li><a href="https://learn.aion.network/docs/migrate-solidity-to-java-smart-contract">Migrate to Java Smart Contracts from Solidity</a></li>
+<li><a href="https://learn.aion.network/docs/java-vs-solidity-function-comparisons">Java vs Solidity Function Comparisons</a></li>
+</ul>
+<hr />
+<h2 id="get-involved">Get Involved</h2>
+<p>There’s a bunch of ways you can get involved with the project, even after this hackathon is over:</p>
+<ul class="incremental">
+<li><a href="https://github.com/aionnetwork">Contribute to the codebase (we’re open-source, obviously)</a></li>
+<li><a href="https://aion.network/bounty">Claim bounties and grants</a></li>
+<li><a href="https://github.com/aionnetwork/AIP">Improve the network by proposing an AIP</a></li>
+<li><a href="https://aion.network/careers/">Join our team! We are hiring!</a></li>
 </ul>
 <h2 id="useful-links">Useful Links</h2>
 <ol class="incremental" type="1">
@@ -89,9 +123,55 @@
 <li><a href="https://learn.aion.network/docs/aiwa">Using the AIWA Browser Wallet (Metamask)</a></li>
 </ol>
 <h2 id="contact-info">Contact Info</h2>
-<p>If you’ve got any questions just find one of the nerds in an Aion shirt, or message us on the <code>#aion-challenge</code> Slack channel.</p>
+<p>If you’ve got any questions just find one of the nerds in an Aion shirt, or message us on the <code>#aion-challenge</code> Slack channel. The following nerds will be around for the weekend:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Picture</th>
+<th>Slack Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jeff</td>
+<td><img src="images/jeff.jpg" alt="Jeff" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/CGQ7KC8TX/"><code>#aion-challenge</code></a></td>
+</tr>
+<tr class="even">
+<td>Jennifer</td>
+<td><img src="images/jennifer.jpg" alt="Jennifer" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/@UGPEZPJ92"><code>@Jennifer (mentor)</code></a></td>
+</tr>
+<tr class="odd">
+<td>John</td>
+<td><img src="images/john.jpg" alt="John" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/@UGR4S92CW"><code>@John (Mentor)</code></a></td>
+</tr>
+<tr class="even">
+<td>Karim</td>
+<td><img src="images/karim.jpg" alt="Karim" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/@UGR0AJFLN"><code>@Karim Zeine (AION)</code></a></td>
+</tr>
+<tr class="odd">
+<td>Minh</td>
+<td><img src="images/minh.jpg" alt="Minh" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/CGQ7KC8TX/"><code>#aion-challenge</code></a></td>
+</tr>
+<tr class="even">
+<td>Nick</td>
+<td><img src="images/nick.jpg" alt="Nick" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/CGQ7KC8TX/"><code>#aion-challenge</code></a></td>
+</tr>
+<tr class="odd">
+<td>Yao</td>
+<td><img src="images/yao.jpg" alt="Yao" /></td>
+<td><a href="https://ethuoft2019.slack.com/messages/CGQ7KC8TX/"><code>#aion-challenge</code></a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="footer">Footer</h3>
-<p>This page is available in <a href="https://aionuoft.ca/index.html">fancy HTML</a>, <a href="https://aionuoft.ca/cheatsheet.md">markdown</a> or a <a href="https://aionuoft.ca/cheatsheet.html">basic af html</a>. We’re using <a href="https://github.com/mblode/marx">Mblode’s Marx Classless CSS</a>.</p>
+<p>This page is available in <a href="https://aionuoft.ca/index.html">fancy HTML</a> or <a href="https://aionuoft.ca/cheatsheet.md">markdown</a>. We’re using <a href="https://github.com/mblode/marx">Mblode’s Marx Classless CSS</a>.</p>
 <figure>
 <img src="aion-uoft.png" alt="Aion and UofT Logos" /><figcaption>Aion and UofT Logos</figcaption>
 </figure>

@@ -1,14 +1,50 @@
 # Aion UofT Hackathon
 
+This is the cheatsheet for the Aion / Eth UofT Hackathon! The grand prize for the Aion category is $2500 for the winning team! We'll also be giving out some tickets to the [Rebuild Conference](https://rebuildconference.org/) happening in April!
+
 ![Aion and UofT Logos](aion-uoft.png)
 
 Here's a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.
 
-1. [Hello World Example](#hello-world-example)
-2. [About Aion](#about-aion)
-3. [Our Core Strategy](#our-core-strategy)
+1. [About Aion](#about-aion)
+2. [Hello World Example](#hello-world-example)
+3. [Get Involved](#get-involved)
 4. [Useful Links](#useful-links)
 5. [Contact Info](#contact-info)
+
+---
+
+## About Aion
+
+Aion is a scalable, approachable, and reliable smart contract platform for decentralized applications. That's a lot of waffle, so here's our definitions of those points:
+
+- Scalable: Solving blockchain scalability
+- Approachable: The most developer-friendly platform
+- Reliable: Providing confidence in a new world
+
+### Our Core Strategy
+
+One of the first things we found useful once we started building test dApps for AVM was how easy it is to write correct code in Java. This is mainly due to the ability to use complex, user-defined, types native to Java. It also helps that we didn't have to change our IDEs or workflow. Java just works.
+
+This doesn’t even begin to tap into the treasure trove of open source tools which have grown around the Java ecosystem, many of which can be applied to this environment to improve quality and velocity.
+
+#### Features
+
+Here's a few features of the JVM (and consequentially the AVM) that are beneficial to the Aion ecosystem. 
+
+##### Performance
+
+The AVM uses the JIT compiler which optimizes the blockchain application code. It also features multi-threading, allowing increased throughput via concurrent transaction execution as opposed to most blockchain VMs.
+
+##### Reliability & Maturity
+
+The core of the JVM is a very mature piece of software, changing little between releases and being used for a myriad of purposes, across countless environments, for over 2 decades. Anything we can do to leverage that history avoids potential pit-falls.
+
+##### Developer-friendly
+
+The Java-based AVM leverages the entire Java tooling ecosystem, making developer onboarding and experience extremely streamlined. You get the full developer package including the compiler and IDE straight out of the box! That said, the AVM taps into a well-established community that has claimed the top spot for the #1 language (Java) in the past few years.
+
+---
 
 ## Hello World Example
 
@@ -117,39 +153,9 @@ Checkout these tutorials if you want to delve in a bit deeper.
 - [Migrate to Java Smart Contracts from Solidity](https://learn.aion.network/docs/migrate-solidity-to-java-smart-contract)
 - [Java vs Solidity Function Comparisons](https://learn.aion.network/docs/java-vs-solidity-function-comparisons)
 
-## About Aion
+---
 
-### What we Are
-
-Aion is a scalable, approachable, and reliable smart contract platform for decentralized applications. That's a lot of waffle, so here's our definitions of those points:
-
-- Scalable: Solving blockchain scalability
-- Approachable: The most developer-friendly platform
-- Reliable: Providing confidence in a new world
-
-## Our Core Strategy
-
-One of the first things we found useful once we started building test dApps for AVM was how easy it is to write correct code in Java. This is mainly due to the ability to use complex, user-defined, types native to Java. It also helps that we didn't have to change our IDEs or workflow. Java just works.
-
-This doesn’t even begin to tap into the treasure trove of open source tools which have grown around the Java ecosystem, many of which can be applied to this environment to improve quality and velocity.
-
-### Features
-
-Here's a few features of the JVM (and consequentially the AVM) that are beneficial to the Aion ecosystem. 
-
-#### Performance
-
-The AVM uses the JIT compiler which optimizes the blockchain application code. It also features multi-threading, allowing increased throughput via concurrent transaction execution as opposed to most blockchain VMs.
-
-#### Reliability & Maturity
-
-The core of the JVM is a very mature piece of software, changing little between releases and being used for a myriad of purposes, across countless environments, for over 2 decades. Anything we can do to leverage that history avoids potential pit-falls.
-
-#### Developer-friendly
-
-The Java-based AVM leverages the entire Java tooling ecosystem, making developer onboarding and experience extremely streamlined. You get the full developer package including the compiler and IDE straight out of the box! That said, the AVM taps into a well-established community that has claimed the top spot for the #1 language (Java) in the past few years.
-
-### How you can get involved
+## Get Involved
 
 There's a bunch of ways you can get involved with the project, even after this hackathon is over:
 
@@ -171,10 +177,18 @@ There's a bunch of ways you can get involved with the project, even after this h
 
 If you've got any questions just find one of the nerds in an Aion shirt, or message us on the `#aion-challenge` Slack channel. The following nerds will be around for the weekend:
 
-| Name | Picture |
+| Name | Picture | Slack Name |
+| ---- | ------- | ---------- |
+| Jeff | ![Jeff](images/jeff.jpg) | [`#aion-challenge`](https://ethuoft2019.slack.com/messages/CGQ7KC8TX/) |
+| Jennifer | ![Jennifer](images/jennifer.jpg) | [`@Jennifer (mentor)`](https://ethuoft2019.slack.com/messages/@UGPEZPJ92) |
+| John | ![John](images/john.jpg) | [`@John (Mentor)`](https://ethuoft2019.slack.com/messages/@UGR4S92CW) |
+| Karim | ![Karim](images/karim.jpg) | [`@Karim Zeine (AION)`](https://ethuoft2019.slack.com/messages/@UGR0AJFLN) |
+| Minh | ![Minh](images/minh.jpg) | [`#aion-challenge`](https://ethuoft2019.slack.com/messages/CGQ7KC8TX/) |
+| Nick | ![Nick](images/nick.jpg) | [`#aion-challenge`](https://ethuoft2019.slack.com/messages/CGQ7KC8TX/) |
+| Yao | ![Yao](images/yao.jpg) | [`#aion-challenge`](https://ethuoft2019.slack.com/messages/CGQ7KC8TX/) |
 
 ### Footer
 
-This page is available in [fancy HTML](https://aionuoft.ca/index.html), [markdown](https://aionuoft.ca/cheatsheet.md) or a [basic af html](https://aionuoft.ca/cheatsheet.html). We're using [Mblode's Marx Classless CSS](https://github.com/mblode/marx).
+This page is available in [fancy HTML](https://aionuoft.ca/index.html) or [markdown](https://aionuoft.ca/cheatsheet.md). We're using [Mblode's Marx Classless CSS](https://github.com/mblode/marx).
 
 ![Aion and UofT Logos](aion-uoft.png)
