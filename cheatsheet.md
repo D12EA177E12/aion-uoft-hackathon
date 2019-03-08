@@ -171,7 +171,7 @@ There's a bunch of ways you can get involved with the project, even after this h
 3. [Free Node Hosting](https://nodesmith.io/)
 4. [Testing and Debugging with Java Smart Contracts](https://blog.aion.network/debugging-avm-contracts-4a3256e86221)
 5. [Example Application using React](https://github.com/aion-jiaying/HelloAVM)
-6. [Using the AIWA Browser Wallet (Metamask)](https://learn.aion.network/docs/aiwa)
+6. [Aion Web3.js Documentation](https://docs.aion.network/docs/aion-web3)
 
 ## Contact Info
 
