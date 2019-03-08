@@ -5,7 +5,7 @@
 Here's a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.
 
 1. [Hello World Example](#hello-world-example)
-2. [About Overview](#about-overview)
+2. [About Aion](#about-aion)
 3. [Our Core Strategy](#our-core-strategy)
 4. [Useful Links](#useful-links)
 5. [Contact Info](#contact-info)
@@ -23,12 +23,12 @@ Follow these steps to spin up a local Aion Blockchain and deploy a simple _Hello
 
     This command creates a sample _Hello World_ project. You can find the contract at `src/main/java/foobar/HelloAvm.java`.
 
-3. Edit the `pom.xml` file to use version the latest version `0.4.8` of the Aion4j plugin:
+3. Edit the `pom.xml` file to use version the latest version `0.4.9` of the Aion4j plugin:
 
     ```xml
     <properties>
         ...
-        <aion4j.plugin.version>0.4.8</aion4j.plugin.version>
+        <aion4j.plugin.version>0.4.9</aion4j.plugin.version>
         ...
     </properties>
     ```
@@ -117,7 +117,7 @@ Checkout these tutorials if you want to delve in a bit deeper.
 - [Migrate to Java Smart Contracts from Solidity](https://learn.aion.network/docs/migrate-solidity-to-java-smart-contract)
 - [Java vs Solidity Function Comparisons](https://learn.aion.network/docs/java-vs-solidity-function-comparisons)
 
-## About Overview
+## About Aion
 
 ### What we Are
 
@@ -169,7 +169,9 @@ There's a bunch of ways you can get involved with the project, even after this h
 
 ## Contact Info
 
-If you've got any questions just find one of the nerds in an Aion shirt, or message us on the `#aion-challenge` Slack channel.
+If you've got any questions just find one of the nerds in an Aion shirt, or message us on the `#aion-challenge` Slack channel. The following nerds will be around for the weekend:
+
+| Name | Picture |
 
 ### Footer
 
