@@ -2,7 +2,7 @@
 
 This is the cheatsheet for the Aion / Eth UofT Hackathon! The grand prize for the Aion category is $2500 for the winning team! We'll also be giving out some tickets to the [Rebuild Conference](https://rebuildconference.org/) happening in April!
 
-![Aion and UofT Logos](aion-uoft.png)
+![Aion and UofT Logos](images/aion-uoft.png)
 
 Here's a bunch of stuff that will probably be useful for this hackathon. Any questions, just find one of the nerds in an Aion t-shirt.
 
@@ -191,4 +191,4 @@ If you've got any questions just find one of the nerds in an Aion shirt, or mess
 
 This page is available in [fancy HTML](https://aionuoft.ca/index.html) or [markdown](https://aionuoft.ca/cheatsheet.md). We're using [Mblode's Marx Classless CSS](https://github.com/mblode/marx).
 
-![Aion and UofT Logos](aion-uoft.png)
+![Aion and UofT Logos](images/aion-uoft.png)
