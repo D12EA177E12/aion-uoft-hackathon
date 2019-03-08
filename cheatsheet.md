@@ -141,7 +141,7 @@ This _deploys_ the contract to a local AVM, also called the [Embedded AVM](https
 
     ```
 
-10. And you're done! When you're ready to deploy to the testnet, check out the [Remote AVM documentation](https://docs.aion.network/docs/maven-and-aion4j-remote-avm).
+10. And you're done! When you're ready to deploy to the testnet, check out the [Remote AVM documentation](https://learn.aion.network/docs/aion-deploy-java-smart-contract-maven).
 
 ### Next Steps
 
