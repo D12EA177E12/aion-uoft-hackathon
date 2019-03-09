@@ -172,6 +172,10 @@ There's a bunch of ways you can get involved with the project, even after this h
 4. [Testing and Debugging with Java Smart Contracts](https://blog.aion.network/debugging-avm-contracts-4a3256e86221)
 5. [Example Application using React](https://github.com/aion-jiaying/HelloAVM)
 6. [Aion Web3.js Documentation](https://docs.aion.network/docs/aion-web3)
+7. [Sample dApp using AIWA](https://getaiwa.com/sample-dapp/)
+8. [Github Repo for the Sample dApp](https://github.com/blockxlabs/aiwa/tree/master/sample-dapp)
+9. [Medium Article explaining how to build with AIWA](https://medium.com/@blockxlabs/building-an-aion-dapp-using-aiwa-and-nodesmith-a5f3f724885d)
+
 
 ## Contact Info
 
